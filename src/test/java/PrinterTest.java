@@ -14,10 +14,9 @@ public class PrinterTest {
 
     @Test
     public void canGetSheets(){
-        int sheetTotal = printer.getSheets();
-        assertEquals(1000, sheetTotal);
+        assertEquals(1000, printer.getSheets());
     }
-
+// not refactoring this for readability and reference
     @Test
     public void canPrintEnoughPaper(){
         int pagesTotal = printer.makeCopies(5, 2);
