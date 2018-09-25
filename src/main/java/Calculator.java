@@ -14,7 +14,7 @@ public class Calculator {
         return firstNumber * secondNumber;
     }
 
-    public int divide(int firstNumber, int secondNumber){
+    public double divide(double firstNumber, double secondNumber){
         return firstNumber / secondNumber;
     }
 }
