@@ -8,43 +8,38 @@ public class WaterBottleTest {
 
     @Before
     public void before(){
-        waterBottle = new WaterBottle(100);
+        waterBottle = new WaterBottle();
     }
 
     @Test
     public void canGetVolume(){
-        int volume = waterBottle.getVolume();
-        assertEquals(100, volume);
+        assertEquals(100, waterBottle.getVolume());
     }
 
     @Test
     public void canDrink(){
         waterBottle.drink();
-        int volume = waterBottle.getVolume();
-        assertEquals(90, volume);
+        assertEquals(90, waterBottle.getVolume());
     }
 
     @Test
     public void canHaveMultipleDrinks(){
         waterBottle.drink();
         waterBottle.drink();
-        int volume = waterBottle.getVolume();
-        assertEquals(80, volume);
+        assertEquals(80, waterBottle.getVolume());
     }
 
     @Test
     public void canEmptyBottle(){
         waterBottle.emptyBottle();
-        int volume = waterBottle.getVolume();
-        assertEquals(0, volume);
+        assertEquals(0, waterBottle.getVolume());
     }
 
     @Test
     public void canFillBottle(){
         waterBottle.emptyBottle();
         waterBottle.fillBottle();
-        int volume = waterBottle.getVolume();
-        assertEquals(100, volume);
+        assertEquals(100, waterBottle.getVolume());
     }
 
 }
